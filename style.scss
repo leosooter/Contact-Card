@@ -1,0 +1,150 @@
+$background: rgb(234, 236, 234);
+$light-border: darken(rgb(234, 236, 234), 10%);
+$light-shadow: 3px 3px 3px darken(rgb(234, 236, 234), 5%);
+$dark-shadow: 3px 3px 3px darken(rgb(234, 236, 234), 20%);
+$input-focus: 0 0 0 rgb(130, 232, 146);
+
+
+body{
+  width: 100%;
+  background-color: $background;
+  font-family: sans-serif;
+}
+main{
+  width: 90%;
+  min-width: 800px;
+  margin: 0 auto;
+  border: 1px solid $light-border;
+}
+.column{
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  min-width: 360px;
+  height: 600px;
+  margin: 30px 5px;
+  border: 1px solid $light-border;
+  box-shadow: $light-shadow;
+}
+.column >form{
+  width: 300px;
+  height: 500px;
+  label{
+    display: block;
+    margin: 30px 0;
+    padding: 10px;
+  }
+}
+
+input{
+  float: right;
+  outline-color: rgb(130, 232, 146);
+}
+
+button{
+  float: right;
+  margin: 20px 10px;
+  box-shadow: $light-shadow;
+}
+textarea{
+  margin-top: 10px;
+  float: right;
+  outline-color: rgb(130, 232, 146);
+}
+.card-box{
+  width: 320px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: scroll;
+}
+.contact-card{
+  position: relative;
+  width: 280px;
+  margin: 20px 0;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid $light-border;
+  box-shadow: $dark-shadow;
+  h2{
+    margin-top: 30px;
+    text-align: center;
+  }
+  p{
+    margin: 30 10px;
+  }
+  .edit{
+    display: none;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  form{
+    display: none;
+    label{
+      display: block;
+      margin-bottom: 10px;
+      padding: 0px;
+      input{
+        margin-right: 30px;
+      }
+    }
+  }
+  button{
+    display: none;
+  }
+  &:hover{
+    .edit{
+      display: block;
+    }
+  }
+}
+.show-name{
+  height: 150px;
+  h2{
+    display: block;
+  }
+  p{
+    display: none;
+  }
+  form{
+    display: none;
+  }
+}
+.show-description{
+  height: 150px;
+  h2{
+    display: none;
+  }
+  p{
+    display: block;
+  }
+  form{
+    display: none;
+  }
+}
+.show-edit{
+  height: 230px;
+  h2{
+    display: none;
+  }
+  p{
+    display: none;
+  }
+  .edit{
+    display: none;
+  }
+  form{
+    display: block;
+    input{
+      //background-color: red;
+    }
+  }
+  button{
+    display: inline-block;
+  }
+  &:hover{
+    .edit{
+      display: none;
+    }
+  }
+}
